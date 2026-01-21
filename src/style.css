@@ -50,6 +50,7 @@ body.better-opennet-modal-open {
 
 .clear-view div.m_col#as2 {
   width: auto !important;
+  max-width: unset !important;
 }
 .clear-view div.r_col#as1 {
   display: none !important;
