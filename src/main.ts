@@ -1,23 +1,6 @@
 import './style.css';
+import { initImageModal } from './imageModal';
+import { initCommentsVisibility } from './commentsVisibility';
 
-function init() {
-  console.log('Userscript loaded: Better Opennet');
-
-  const container = document.createElement('div');
-  container.id = 'my-userscript-container';
-  container.innerHTML = `
-    <div>Hello from <b>Better Opennet</b>!</div>
-    <button id="my-btn">Click me</button>
-  `;
-
-  document.body.appendChild(container);
-
-  const btn = container.querySelector('#my-btn');
-  if (btn) {
-    btn.addEventListener('click', () => {
-      alert('Button clicked inside Userscript!');
-    });
-  }
-}
-
-init();
+initImageModal();
+initCommentsVisibility();

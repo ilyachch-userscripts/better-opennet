@@ -1,28 +1,56 @@
-/* Пример стилей для нашего виджета */
-#my-userscript-container {
+/* Image modal overlay */
+#better-opennet-image-modal {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #222;
-  color: #fff;
-  padding: 15px;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  padding: 20px;
+  box-sizing: border-box;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 180ms ease,
+    visibility 0s linear 180ms;
+}
+
+#better-opennet-image-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition:
+    opacity 180ms ease,
+    visibility 0s;
+}
+
+#better-opennet-image-modal__image {
+  max-width: min(96vw, 1600px);
+  max-height: 92vh;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  z-index: 9999;
-  font-family: monospace;
-  border: 1px solid #444;
+  background: #111;
+  transform: scale(0.98);
+  opacity: 0;
+  transition:
+    transform 180ms ease,
+    opacity 180ms ease;
 }
 
-#my-userscript-container button {
-  background: #007bff;
-  border: none;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 5px;
+#better-opennet-image-modal.is-open #better-opennet-image-modal__image {
+  transform: scale(1);
+  opacity: 1;
 }
 
-#my-userscript-container button:hover {
-  background: #0056b3;
+body.better-opennet-modal-open {
+  overflow: hidden;
+}
+
+.clear-view div.m_col#as2 {
+  width: auto !important;
+}
+.clear-view div.r_col#as1 {
+  display: none !important;
 }
