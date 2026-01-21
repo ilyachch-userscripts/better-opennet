@@ -26,10 +26,12 @@ export default defineConfig({
           'GM_getValue',
           'GM_deleteValue',
         ],
+        homepageURL: 'https://github.com/ilyachch-userscripts/better-opennet',
+        supportURL: 'https://github.com/ilyachch-userscripts/better-opennet/issues',
         updateURL:
-          'https://github.com/ilyachch/better-opennet/releases/latest/download/better-opennet.user.js',
+          'https://github.com/ilyachch-userscripts/better-opennet/releases/latest/download/better-opennet.user.js',
         downloadURL:
-          'https://github.com/ilyachch/better-opennet/releases/latest/download/better-opennet.user.js',
+          'https://github.com/ilyachch-userscripts/better-opennet/releases/latest/download/better-opennet.user.js',
       },
     }),
   ],
